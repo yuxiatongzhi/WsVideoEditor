@@ -12,7 +12,7 @@ set(CMAKE_VERBOSE_MAKEFILE on)
 # -Wformat -Werror=format-security: 解决输出日志的各种问题
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DANDROID_NDK -DRENDER_SDK ${COMPILE_PARAM}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DANDROID_NDK -DRENDER_SDK -fvisibility=hidden ${COMPILE_PARAM}")
-set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections,--icf=safe ${COMPILE_PARAM}")
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections ${COMPILE_PARAM} -fuse-ld=lld")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -isystem /Users/whensunset/Library/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security")

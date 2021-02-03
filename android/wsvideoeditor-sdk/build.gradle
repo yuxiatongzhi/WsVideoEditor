@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
 
 
     defaultConfig {
@@ -13,6 +13,7 @@ android {
 
         ndk {
             abiFilters 'armeabi-v7a'
+//            abiFilters 'arm64-v8a'
         }
         externalNativeBuild {
             cmake {
